@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const request = require('request-promise');
 
 (async () => {
     const browser = await puppeteer.launch();
@@ -11,6 +12,8 @@ const puppeteer = require('puppeteer');
                 for(let i=0; i < chats.length; i++) {
                   console.log(chats[i].name + ": " + chats[i].content)
                 }
+            request('https://coincheck.com/api/rate/xem_jpy').then(xem=>{ console.log("NEM: " + JSON.parse(xem).rate)})
+            request('https://coincheck.com/api/rate/xrp_jpy').then(xrp=>{ console.log("Ripple: " + JSON.parse(xrp).rate)})
 						} catch(e) {
 						}
         })
