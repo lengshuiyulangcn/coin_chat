@@ -24,8 +24,10 @@ var reset   = '\u001b[0m';
         }
         request('https://coincheck.com/api/rate/xrp_jpy').then(price=>{ console.log(blue+"XRP: " + JSON.parse(price).rate+reset)})
         request('https://coincheck.com/api/rate/bch_jpy').then(price=>{ console.log(blue+"BCH: " + JSON.parse(price).rate+reset)})
+        request('https://coincheck.com/api/rate/lsk_jpy').then(price=>{ console.log(blue+"LSK: " + JSON.parse(price).rate+reset)})
         request('https://api.zaif.jp/api/1/last_price/zaif_jpy').then(last_price=>{ console.log(blue+"ZFT: "+ JSON.parse(last_price).last_price+reset)})
         request('https://api.zaif.jp/api/1/last_price/xem_jpy').then(last_price=>{ console.log(blue+"NEM: "+ JSON.parse(last_price).last_price+reset)})
+        request('https://api.zaif.jp/api/1/last_price/mona_jpy').then(last_price=>{ console.log(blue+"MNA: "+ JSON.parse(last_price).last_price+reset)})
       } catch(e) {
       }
     })
