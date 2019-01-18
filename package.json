@@ -4,8 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^2.4.1",
+    "moment": "^2.23.0",
     "puppeteer": "^0.12.0",
     "request": "^2.83.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "ws": "^6.1.2"
   }
 }
